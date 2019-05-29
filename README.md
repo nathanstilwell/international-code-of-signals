@@ -1,3 +1,4 @@
+![Kilo](public/flags/ics-kilo.svg =50x)
 # ICS
 ## International Code of Signals a.k.a. Nautical Flags and what they mean
 
