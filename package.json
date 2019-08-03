@@ -12,11 +12,15 @@
     "react-scripts": "3.0.1",
     "typescript": "3.5.3"
   },
+  "resolutions": {
+    "lodash.template": "4.5.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "resolve": "npx npm-force-resolutions"
   },
   "eslintConfig": {
     "extends": "react-app"
