@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "resolve": "npx npm-force-resolutions"
+    "resolve": "npx npm-force-resolutions && npm install"
   },
   "eslintConfig": {
     "extends": "react-app"
