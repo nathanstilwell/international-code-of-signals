@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FunctionComponent } from "react";
+import styled from "styled-components";
 
-const App: React.FC = () => {
+import { Flag } from "./components";
+
+const flags = [
+  { code: "alpha", label: "Alpha" },
+  { code: "bravo", label: "Bravo" },
+  { code: "charlie", label: "Charlie" },
+  { code: "delta", label: "Delta" },
+  { code: "echo", label: "Echo" },
+  { code: "foxtrot", label: "Foxtrot" },
+  { code: "golf", label: "Golf" },
+  { code: "hotel", label: "Hotel" },
+  { code: "india", label: "India" },
+  { code: "juliet", label: "Juliet" },
+  { code: "kilo", label: "Kilo" },
+  { code: "lima", label: "Lima" },
+  { code: "mike", label: "Mike" },
+  { code: "november", label: "November" },
+  { code: "oscar", label: "Oscar" },
+  { code: "papa", label: "Papa" },
+  { code: "quebec", label: "Quebec" },
+  { code: "romeo", label: "Romeo" },
+  { code: "sierra", label: "Sierra" },
+  { code: "tango", label: "Tango" },
+  { code: "uniform", label: "Uniform" },
+  { code: "victor", label: "Uniform" },
+  { code: "whiskey", label: "Uniform" },
+  { code: "x-ray", label: "X-ray" },
+  { code: "yankee", label: "Yankee" },
+  { code: "zulu", label: "Zulu" },
+];
+
+const Flags = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const Main = styled.main`
+  background-color: navy;
+  color: white;
+  height: 100%;
+  width: 100%;
+`;
+
+const App: FunctionComponent = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Main>
+      <Flags>
+        {flags.map((flag) => (
+          <Flag {...flag} size="small" key={flag.code} />
+        ))}
+      </Flags>
+    </Main>
   );
-}
+};
 
 export default App;
