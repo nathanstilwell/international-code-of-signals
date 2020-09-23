@@ -31,7 +31,7 @@ const Label = styled.span<{ size: flagSize }>`
 
 const Signal = styled.div<{ size: flagSize }>`
   height: auto;
-  margin: 1rem;
+  margin: 1rem 2rem 1rem 1rem;
   width: ${cond([
     [matches({ size: "large" }), constant("8rem")],
     [matches({ size: "medium" }), constant("4rem")],
