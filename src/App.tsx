@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FunctionComponent } from "react";
+import styled from "styled-components";
 
-const App: React.FC = () => {
+import { Flags } from "./components";
+
+const Main = styled.main`
+  background-color: navy;
+  color: white;
+  height: 100%;
+  width: 100%;
+`;
+
+const Heading = styled.h1`
+  font-size: 6rem;
+  margin: 0;
+  padding: 2rem 0;
+`;
+
+const App: FunctionComponent = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Main>
+      <Heading>International Code of Signals</Heading>
+      <Flags />
+    </Main>
   );
-}
+};
 
 export default App;
